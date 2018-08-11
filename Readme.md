@@ -1,210 +1,39 @@
-Ludum Dare 42
-=============
+Blockage
+========
 
-/.*/?
+A game about moving blocks to reach the exit.
 
-The answer to life, the universe, and everything.
-
-Details
+Concept
 -------
 
-This is a game submission for the Ludum Dare 42. The theme was "Running out of
-space."
+### Goal
+* You are trying to reach the exit of each room.
 
-Brainstorming
--------------
+### Player Actions
+* You can pick up any number of blocks, as long as they are the same color
+* You can only pick up blocks nearby (probably no more than 3 blocks distant)
+* You can drop blocks one at a time in a location of your choosing (probably no more than 3 blocks distant)
+* You can walk on dropped blocks
+* You can jump on top of dropped blocks
 
-Space in a room
-Space in space
-Space as a character
-Space as a person (a bit spacey that)
+### Room Mechanisms
+* Picking up all blocks of a given color may activate some mechanism
+* The door is activated by a certain color in each room
+* A bridge may be activated by a different color in each room
+* Mechanisms indicate which color is needed to activate them
 
-Running out as in having a set amount and running out of it
-Running as in literally running
-Running as in water running out of a space
+### Colors
+* There are four colors
+	- Green (#71E411, rgb(113, 228, 17))
+	- Blue (#1476A5, rgb(20, 118, 165))
+	- Red (#E51252, rgb(229, 18, 82))
+	- Orange (#FF9113, rgb(255, 145, 19))
+* Primarily, the level will be grey except for the blocks
+	- Light gray (#AAAAAA, rgb(170, 170, 170))
+	- Dark gray (#585858, rgb(88, 88, 88))
 
-Obvious ones
-* Filling up a room
-* Needing to add things to accomplish other things, but only having so much space
-* Needing to accomplish the task as you run out of space to move
-* Escape space - Explosive decompression, run away from the expanding vacuum on a doomed space ship. How long can you survive. (idea)
-
-Can I make this a tower defense?
-Yes
-* You are defending an island or something
-* Over time, you lose spaces to build towers
-* You need to upgrade the towers you have to make sure you keep up with the growing waves of enemies
-
-Can I make this an FPS?
-Probably... I don't do FPS... usually. Might be fun
-
-Breakout seems obvious
-Or tetris
-
-Old Western theme?
-Town is running out of space... too much dysentery?
-Gun battles... too many opponents
-
-One mechanical idea is to have limited inventory space (or similar space) and to have some constant influx of something useless or challenging taking up that space
-So you have increasingly less space to put things in your inventory
-
-Say, for instance, a mech game where you only have so many augmentation slots, but each upgrade comes with additional useless pieces that must be added.
-Or the pieces could be larger with each upgrade so you have less space for variety. Eventually you have to choose between speed or shields or guns, making you
-a rather specialized unit, but not very effective in certain ways.
-
-Fluid running out of a space seems like an interesting idea but represents a significant programming challenge, especially in 3d
-What would be the goal and what would be the mechanics?
-
-* Fill up these things? Meh
-* Open up the path so you can go from one end to the other.
-	- Like it, but level design challenge
-	- Also clarifying how this hits the theme would be difficult
-	- But then that doesn't really matter too much
-
-Runner where the path is continually disappearing
-
-Puzzle with rooms on top of one another, each room has a set amount of liquid
-You can decrease the amount of liquid in the room by dumping it into the next room,
-but then you have to navigate through it since the exit is at the bottom
-
-Floodgait :)
-Flood-Gate
-
-Allow bidirectional travel between rooms
-Add mechanisms that only work outside of water
-- Doors
-- Raising and lowering blocks
-
-The problem is the irrevesableness of water draining to the room below
-
-Also the puzzles I can think of aren't very difficult or interesting
-
-So the fun of the game is debateable
-
-Pity, because I like the idea
-
------------------------------
-
-Base something off of the inventory idea?
-
-Shooters of some variety are an obvious choice
-But basically you want something where the inventory is used for something useful
-But also have something where the inventory could be filled by something and progressively run out of space
-The tower defense idea is essentially one of those, only the inventory is tower space
-
-The idea of a population draining the resources while you try to get rid of them is interesting
-Earth and resources is an obvious iteration of that
-You could extend that to bugs, eating all the food. Gross
-
-I like the idea of a game where you want to consume space to gain benefit, but
-also limit yourself by consuming that space
-
-Space equals power
-Inventory that means more power takes up more inventory space
-But that's simple
-
-Something using the space bar?
-Limited uses of the spacebar for something critical? Like jumping? :)
-
-You can only jump so many times
-The more you progress, the more you can't jump
-
-The level encroaches on you as you progress
-
-Collect things and leave level?
-
-Simple 3d platforming?
-FPS platforming
-
-Enemies in a room put in another room?
-The problem is how do you scale puzzles with the choice to delay penalties?
-Too high level of a question for my brain in a brainstorming state
-
-Cows
-
-An rpg that wants you to pick everything up?
-Globberlike? where your character gradually just holds everything at once is a really large mass?
-
-Limited spacebar running out over time, so it's not so much how much you use it
-but how much time has passed before you lose it
-
-Spacebar can be attack
-Can be jump
-Can be another ability
-Can be activate thingy
-
-Runner through level
-with these you want interesting levels
-
-You could have recharges for the spacebar
-
-Could be a top down shooter
-Where your a boat or a spaceship
-You have fuel which runs out over time
-While you have fuel you can fire your lasers
-When you have no fuel, you lose mometum until you stop
-
-Either there are enemies
-Or you are escaping from something
-
-... say a waterfall
-
-As you try to escape from the waterfall, you are running out of fuel
-If you run out of fuel, you'll be drawn in by the river until you plunge over
-the waterfall
-
-You must blast logs out of the way, go around them
-
-Rivers mean water though... can I do water in unreal... psshhhtttt... totally :)
-
-So...
-
-Le Amazon
-* Escape from the edge of a waterfall
-* Boat upstream around obstacles like rocks, logs, and alligators
-* You are constantly running out of fuel, so be sure to pick some up along the way
-* Use fuel to clear obstacles by pressing `space` (shoot the alligator, shoot
-the log, shoot the rocks)
-
-
-Strengths
-* Simple
-* Auto-genable
-* Infinite possibilities
-* Can add lazors
-
-Weaknesses
-* The theme is weak with this one
-* Alligator AI
-* WATER
-
-------------------------------------------------
-
-FPS puzzler
-
-You go from room to room
-
-You must collect all the blocks of a given color to make the door open
-
-These stay in your inventory as you leave the room
-
-You can only hold a single color of block at a time
-
-So to pick up the next color of block, you'll need to unload the current color
-of block
-
-So design is key in this game
-You'll need to make each level by hand
-And balance it
-Fortunately, the game mechanics seem simple
-Physics driven
-
-Getting the cubes to stay in place once placed will be interesting
-But you should be able to physics sleep and then make them static
-I wonder if there's an event to listen for sleeping
-If so, you just inactivate the physics component after sleep
-
-How many levels can I make?
+Level List
+----------
 
 * Intro level - simple three or four blocks of different colors on floor
 * Secondary Intro level - change colors to introduce inventory mechanics maybe add some more blocks
@@ -217,6 +46,57 @@ How many levels can I make?
 * Seventh level - bridge to small room, drop many blocks in small room carefully, bridge to island, fill chasm with inventory, pickup door color
 * Eighth level - fill chasm to get to bridge color, return with bridge color to cross
 
-Occlusion
-Obstruction
-Blockage
+Assets
+------
+
+* Logic
+	- Player character movement
+	- Player pickup blocks
+	- Player place blocks
+	- Block logic physics, and sleeping
+	- Mechanisms listening for all blocks to be picked up
+	- Transitioning from one level to the next
+	- Menu screen
+		+ Level choice screen?
+		+ Level finished screen?
+			* Blocks picked up
+			* Blocks placed
+			* Time taken
+	- Tutorial dialogs
+* Models
+	- Player?
+		+ Something to point out where blocks will be placed
+	- Level pieces?
+		+ May just use block geometry
+	- Blocks
+		+ Color changes
+		+ Design changes?
+	- Door
+		+ Color indicator
+		+ Opening and shutting animation
+	- Bridge
+		+ Endpoints
+		+ Bridge itself
+		+ Unfolding anim?
+* Textures
+	- Wall textures for interest
+	- Door textures
+	- Bridge textures
+	- Block place indicator
+	- Block design textures?
+* Sounds
+	- Music
+		+ Menu background
+		+ Level background(s)
+	- Blocks
+		+ Pickup
+		+ Place
+		+ Land on other block?
+	- Door
+		+ Open
+		+ Close?
+	- Bridge
+		+ Extend
+		+ Collapse?
+	- Player
+		+ Steps?
