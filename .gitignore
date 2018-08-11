@@ -1,1 +1,6 @@
 *.blend[0-9]
+*_BuiltData.uasset
+.vs/
+Binaries/
+Intermediate/
+Saved/
